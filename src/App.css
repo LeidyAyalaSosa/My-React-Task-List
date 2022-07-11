@@ -1,0 +1,14 @@
+.Container {
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  border: 10px solid black;
+  background-color: antiquewhite;
+  margin: auto;
+  line-height: 40px;
+  border-radius: 1fr;
+}
+
+.form {
+  width: auto;
+}
