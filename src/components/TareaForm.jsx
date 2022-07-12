@@ -1,27 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "../App.css";
 
-const taskForm = (props) => {
-    const [inputText, setInputText] = useState("");
+const TaskForm = (props) => {
+  const [inputText, setInputText] = useState("");
+  const [validation, setValidation] = useState(true);
 
-    const handleForm = (event) => {
-        setInputText(event.target.value);
+  const handleForm = (event) => {
+    setInputText(event.target.value);
+  };
+
+  const submit = (event) => {
+    event.preventDefault();
+    if (inputText.trim() !== "") {
+      props.newTask(inputText);
+      setInputText("");
+      setValidation(true);
+    } else {
+      setValidation(false);
     }
+  };
 
-    const submit = (event) => {
-        event.preventDefault();
-    
-    }
+  return (
+    <div>
+      <form onSubmit={submit}>
+        <label className="from-label">Agregar tarea</label>
+        <input value={inputText} onChange={handleForm} className="from-input" />
+        <button>Agregar</button>
+      </form>
+      {!validation && (
+        <div className="validation">No se ha añadido una tarea</div>
+      )}
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <form className="Container" onSubmit={submit}>
-                <label>Agregar tarea</label>
-                <input value={inputText} onChange={handleForm}/>
-                <button>Agregar</button>
-            </form>
-        </div>
-        
-    )
-}
-
-export default taskForm;
+export default TaskForm;
