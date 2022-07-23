@@ -53,7 +53,7 @@ function App() {
               e,
               index //se tiene el indice y las tareas se pasan por props
             ) => (
-              <task
+              <Task
                 task={e}
                 erase={erase} //se pasa la funciòn de borrar
                 id={index}
