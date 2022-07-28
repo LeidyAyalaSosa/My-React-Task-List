@@ -32,6 +32,11 @@ const Task = (props) => {
     <div>
       {!editMode ? (
         <div className="task">
+          <input
+            className="check"
+            type="checkbox"
+            onChange={() => console.log(Task.id)}
+          />
           <label className="from-span">{props.task}</label>
           <label onClick={edit} className="span">
             Editar

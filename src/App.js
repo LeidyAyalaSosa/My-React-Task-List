@@ -34,33 +34,30 @@ function App() {
     setTaskList(updatedList); //enviar lista de tarea (con sus actualizaciones) o la lista actualizada
   };
 
-  /*const checkBox = (id, task) => {updatedList = taskList.map((e,index) =>{
-    if (index === id) {
-      e = task
-    }
-  }}*/
-
   return (
-    <div className="Container">
+    <div>
       <header>
         <title>Task List</title>
         <h1>LISTA DE TAREAS</h1>
-        <TaskForm newTask={newTask} />
+        <div className="Container">
+          <TaskForm newTask={newTask} />
 
-        <div className="list">
-          {taskList.map(
-            (
-              e,
-              index //se tiene el indice y las tareas se pasan por props
-            ) => (
-              <Task
-                task={e}
-                erase={erase} //se pasa la funciòn de borrar
-                id={index}
-                edit={updateTask}
-              /> //
-            )
-          )}
+          <div className="list">
+            {taskList.map(
+              (
+                e,
+                index //se tiene el indice y las tareas se pasan por props
+              ) => (
+                <Task
+                  task={e}
+                  erase={erase} //se pasa la funciòn de borrar
+                  id={index}
+                  edit={updateTask}
+                  checked={!Task.completed}
+                /> //
+              )
+            )}
+          </div>
         </div>
       </header>
     </div>

@@ -1,55 +1,57 @@
 body {
-  background-color: dimgray;
-  padding-top: 100px;
+  background-color: rgb(240, 195, 195);
+  padding: 0px;
+}
+
+h1 {
+  color: rgb(251, 255, 0);
+  background-color: rgb(165, 131, 244);
+  padding-bottom: 10px;
+  font-family: cursive;
+  font-size: 50px;
+  text-align: center;
 }
 
 .Container {
   text-align: center;
   width: 90%;
   max-width: 1000px;
-  border: 10px solid black;
+  border: 10px solid rgb(205, 177, 177);
   background-color: rgb(165, 131, 244);
   margin: auto;
   border-radius: 10px;
 }
-
-h1 {
-  display: block;
-  color: rgb(91, 94, 184);
-  margin-bottom: 10px;
-  font-family: cursive;
-  font-size: 50px;
-}
-
 .from-label {
   display: block;
-  color: rgb(200, 246, 130);
-  margin-bottom: 10px;
+  color: rgb(253, 255, 121);
+  padding: 20px;
   font-family: cursive;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .from-input {
   display: block;
   font-family: cursive;
   font-size: 25px;
-  border: 5px solid dimgray;
+  border: 5px solid rgb(146, 145, 145);
   margin: auto;
-  background-color: rgb(160, 227, 235);
-  width: 500px;
-  height: 40px;
+  background-color: rgb(209, 189, 255);
+  width: 80%;
   border-radius: 20px;
+  padding-left: 2%;
 }
 
 button {
-  background-color: rgb(102, 214, 255);
-  color: rgb(161, 121, 254);
+  background-color: rgb(251, 255, 43);
+  color: rgb(84, 84, 84);
   font-family: cursive;
   font-size: 20px;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 0 5px black;
   width: 100px;
   height: 40px;
   margin: 20px;
+  cursor: pointer;
 }
 
 .validation {
@@ -61,43 +63,59 @@ button {
 }
 
 .list {
+  align-content: center;
   width: 80%;
-  margin: 50px auto 0;
+  margin: 3%;
+  display: inline-block;
 }
 
 .task {
   font-size: 30px;
   margin: 20px 0 15px 0;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  display: flex;
+}
+
+.check {
+  width: 5%;
+  font-size: medium;
+  border: 5px solid rgb(0, 0, 0);
 }
 
 .from-span {
   display: block;
+  text-align: left;
   font-family: cursive;
   font-size: medium;
-  border: 5px solid rgb(0, 0, 0);
-  margin: auto;
+  padding: 1.5%;
+  width: 100%;
+  background-color: rgb(175, 255, 159);
+  border-radius: 20px;
+  margin: 3%;
 }
 
 .span {
-  background-color: rgb(122, 248, 183);
-  color: rgb(224, 224, 224);
+  background-color: rgb(113, 208, 245);
+  color: rgb(255, 255, 255);
   font-family: cursive;
+  text-align: center;
   font-size: 20px;
   border-radius: 15px;
-  width: 100px;
+  width: 120px;
   height: 40px;
-  margin: 20px;
+  margin: 3%;
+  box-shadow: 0 7px rgb(77, 176, 215);
+  cursor: pointer;
 }
 
 .span-uno {
-  background-color: rgb(216, 100, 100);
-  color: rgb(224, 224, 224);
+  background-color: rgb(253, 102, 97);
+  color: rgb(255, 255, 255);
   font-family: cursive;
   font-size: 20px;
   border-radius: 15px;
-  width: 100px;
+  width: 120px;
   height: 40px;
-  margin: 20px;
+  margin: 3%;
+  box-shadow: 0 7px rgb(209, 89, 85);
+  cursor: pointer;
 }
